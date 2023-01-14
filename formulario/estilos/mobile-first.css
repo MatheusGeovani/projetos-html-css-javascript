@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --cor-fundo: #2d2f3d;
+    --cor-text: #a4adf5;
+    --cor-main: #343647;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 98vh;
+}
+body {
+    height: 98vh;
+    width: 100vw;
+    background-color: var(--cor-fundo);
+    color: var(--cor-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: block;
+    margin: auto;
+}
+main {
+    background-color: var(--cor-main);
+    width: 360px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
+}
+section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.formulario {
+    margin: 20px;
+
+}
+.formulario i, small {
+    visibility: hidden;
+}
+label{
+    font-size: 12px;
+    font-weight: bolder;
+}
+input {
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 15px;
+}
+/* Simulação de sucesso dos inputs */
+.formulario.sucess input{
+    border: 2px solid #4eca64;
+    border-radius: 3px;
+}
+/* Simulção de erro dos inputs */
+.formulario.error input{
+    border: 2px solid #db5a5a;
+    border-radius: 3px;
+}
+.formulario.sucess i .img-sucess {
+    visibility: visible;
+}
+.formulario.error i .img-error {
+    visibility: visible;
+    margin-left: -16px;
+}
+.formulario.error small {
+    visibility: visible;
+}
+img {
+    margin-top: 5px;
+    width: 14px;
+}
+small {
+    color: rgb(253, 116, 116);
+}
+#enviar {
+    padding-bottom: 10px;
+}
+#enviar > button {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #6249d4e0;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+#enviar > button:hover {
+    background-color: #7657ffe0;
+
+}

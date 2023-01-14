@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --cor-padrao: #2aadff;
+    --cor-fundo: #144f746b;
+    --cor-text: #0e3a55;
+    --cor-btn: #144f74;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", cursive;
+    font-weight: bolder;
+    color: var(--cor-text);
+    background-color: var(--cor-fundo);
+}
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor-padrao);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.253);
+}
+main h1 {
+    border-bottom: 1px solid var(--cor-text);
+    text-align: center;
+    font-size: 100%;
+}
+.inputs {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 17px;
+}
+.button {
+    margin-top: 20px;
+}
+.button > input {
+    background-color: var(--cor-text);
+    color: #fff;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.button > input:hover {
+    background-color: var(--cor-btn);
+    color: rgb(214, 214, 214);
+}
+.resultado {
+    text-align: center;
+    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.158);
+}
+footer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100vw;
+    bottom: 0px;
+    padding: 5px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+footer p {
+    text-align: center;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: rgba(122, 0, 0, 0.644);
+}
