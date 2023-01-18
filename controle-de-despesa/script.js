@@ -6,17 +6,12 @@ const form = document.querySelector("#form")
 const inputTransactionName = document.querySelector("#text")
 const inputTransactionAmount = document.querySelector("#amount")
 
-let dummyTransacrions = [
-    { id: 1, name: "Bolo de brigadeiro", amount: -20 },
-    { id: 2, name: "Salário", amount: 300 },
-    { id: 3, name: "Torta de frango", amount: -10 },
-    { id: 4, name: "Violão", amount: 150 }
-]
-
-const localStorageTransactions = localStorage.getItem("transactions")
+const localStorageTransactions = JSON.parse(localStorage.getItem("transactions"))
+let transactions = localStorage.getItem("transactions") !== null ? localStorageTransactions : []
 
 const removeTransection = ((ID) => {
-    dummyTransacrions = dummyTransacrions.filter(transaction => transaction.id !== ID)
+    transactions = transactions.filter(transaction => transaction.id !== ID)
+    updateLocalStorage()
     init()
 }) 
 
@@ -38,7 +33,7 @@ const addTransactionintoDom = transaction => {
 }
 
 const updateBalanceValues = () => {
-    const transactionsAmounts = dummyTransacrions.map((transaction) => {
+    const transactionsAmounts = transactions.map((transaction) => {
         return transaction.amount
         
     })
@@ -57,10 +52,14 @@ const updateBalanceValues = () => {
 const init = () => {
     transactionsUl.innerHTML = ""
 
-    dummyTransacrions.forEach(addTransactionintoDom)
+    transactions.forEach(addTransactionintoDom)
     updateBalanceValues()
 }
 init()
+
+const updateLocalStorage = () => {
+    localStorage.setItem("transactions", JSON.stringify(transactions))
+}
 
 const generateID = () => Math.round(Math.random() * 1000)
 
@@ -76,8 +75,9 @@ form.addEventListener("submit", event => {
 
     const transaction = { id: generateID(), name: transactionName, amount: Number(transactionAmount)     }
 
-    dummyTransacrions.push(transaction) // adicionando a transação do usuario do dummyTransaction
+    transactions.push(transaction) // adicionando a transação do usuario do dummyTransaction
     init()
+    updateLocalStorage()
 
     inputTransactionName.value = ""
     inputTransactionAmount.value = ""
