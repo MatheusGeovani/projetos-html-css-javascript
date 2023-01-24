@@ -78,6 +78,16 @@
         height: 40vh;
         border-radius: 10px;
     }    
+    .action-button {
+        font: bold 30px sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        color: #00000000;
+        user-select: none;
+        z-index: 1;
+    }
 }
 
 /* PC */
@@ -113,5 +123,14 @@
         height: 60vh;
         border-radius: 10px;
     }
-    
+    .action-button {
+        font: bold 30px sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        color: #00000000;
+        user-select: none;
+        z-index: 1;
+    }
 }
