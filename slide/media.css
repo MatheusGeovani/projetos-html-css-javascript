@@ -1,0 +1,109 @@
+/* Celular */
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    
+    .container-slide {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 30vh auto;
+        width: 80vw;
+        height: 26vh;
+        background-color: rgb(19, 19, 19);
+        border-radius: 10px;
+        box-shadow: 0 20px 30px black;
+    }
+    
+    .container-itens {
+        position: absolute;
+        display: flex;
+        width: 80vw;
+        height: 26vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .item {
+        width: 80vw;
+        height: 26vh;
+        transition: all 1s;
+    }
+    .item img {
+        width: 80vw;
+        height: 40vh;
+        border-radius: 10px;
+    }
+    
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .container-slide {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 30vh auto;
+        width: 80vw;
+        height: 40vh;
+        background-color: rgb(19, 19, 19);
+        border-radius: 10px;
+        box-shadow: 0 20px 30px black;
+    }
+    
+    .container-itens {
+        position: absolute;
+        display: flex;
+        width: 80vw;
+        height: 40vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .item {
+        width: 80vw;
+        height: 40vh;
+        transition: all 1s;
+    }
+    .item img {
+        width: 80vw;
+        height: 40vh;
+        border-radius: 10px;
+    }
+    
+}
+
+/* PC */
+@media screen and (min-width: 992px) {
+    .container-slide {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 20vh auto;
+        width: 80vw;
+        height: 60vh;
+        background-color: rgb(19, 19, 19);
+        border-radius: 10px;
+        box-shadow: 0 20px 30px black;
+    }
+    
+    .container-itens {
+        position: absolute;
+        display: flex;
+        width: 80vw;
+        height: 60vh;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .item {
+        width: 80vw;
+        height: 60vh;
+        transition: all 1s;
+    }
+    .item img {
+        width: 80vw;
+        height: 60vh;
+        border-radius: 10px;
+    }
+    
+}
