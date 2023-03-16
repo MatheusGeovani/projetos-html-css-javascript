@@ -7,7 +7,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: #45214A;
+    background-image: linear-gradient(360deg, #1d282a, #38585d);
     display: flex;
  
     justify-content: center;
@@ -53,6 +53,14 @@ img{
 }
 .play, pause{
     font-size: 50px;
+}
+i{
+    cursor: pointer;
+    transition: .3s;
+}
+i:hover{
+    color: #bd5806fa;
+    
 }
 
 @media screen and (min-width:768px) and (max-width:992px){
