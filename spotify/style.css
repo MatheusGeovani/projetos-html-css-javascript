@@ -9,7 +9,6 @@ body{
     height: 100vh;
     background-image: linear-gradient(360deg, #1d282a, #38585d);
     display: flex;
- 
     justify-content: center;
     flex-direction: column;
     color: #f1f1f1;
@@ -19,6 +18,7 @@ body{
     display: block;
     font-size: 12px;
     text-align: center;
+    margin-bottom: 4em;
 }
 main{
     display: flex;
@@ -29,21 +29,43 @@ main{
 }
 
 img{
-    margin-top: 80px;
-    width: 70%;
+    width: 100%;
+    border: 5px solid #fff;
 }
 .sub-titulo{
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .text-heart{
-    width: 100%;
+    width: 90%;
     margin-top: 7px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+}
+.text-heart > h5{
+    color: #8b999c;
 }
 .barra{
     margin: 25px 0px 25px 0px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #8b999ca1;
+    border-radius: 15px;
+    height: 3px;
+    width: 100%;
+    
+}
+#current-progress{
+    width: 50%;
+    height: inherit;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 15px;
 }
 .icons{
     display: flex;
