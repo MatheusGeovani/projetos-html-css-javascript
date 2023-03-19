@@ -76,8 +76,11 @@ h5, .heart{
     justify-content: space-around;
     font-size: 25px;
 }
-.play, pause{
+.play, .pause{
     font-size: 50px;
+}
+.ativo {
+    display: none;
 }
 i{
     cursor: pointer;
