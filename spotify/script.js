@@ -6,6 +6,7 @@ const play = document.querySelector(".play");
 const pause = document.querySelector(".pause");
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
+const currentProgress = document.querySelector("#current-progress");
 
 
 const Vem_Me_Buscar = {
@@ -84,4 +85,13 @@ next.addEventListener("click", function (){
     }
     initializeSong();
     music.play();
+})
+
+music.addEventListener("timeupdate", function updateProgressBarra(){
+    music.currentTime
+    music.duration
+    const barWidth = (music.currentTime / music.duration) * 100; // calculo para saber o quanto ja se escutou da music
+    currentProgress.style.setProperty('--progress',` ${barWidth}%`)
+
+
 })

@@ -63,7 +63,8 @@ h5, .heart{
     
 }
 #current-progress{
-    width: 50%;
+    --progress: 0%;
+    width: var(--progress);
     height: inherit;
     background-color: white;
     border-radius: 50%;
