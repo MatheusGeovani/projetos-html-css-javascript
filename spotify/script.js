@@ -7,6 +7,7 @@ const pause = document.querySelector(".pause");
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
 const currentProgress = document.querySelector("#current-progress");
+const progressContainer = document.querySelector("#progress-container");
 
 
 const Vem_Me_Buscar = {
@@ -74,7 +75,7 @@ pause.addEventListener("click", function (){
 next.addEventListener("click", function (){
     audio[0] += 1;
     music = audio;
-    music.play()
+    music.play();
 })
 
 next.addEventListener("click", function (){
@@ -91,7 +92,12 @@ music.addEventListener("timeupdate", function updateProgressBarra(){
     music.currentTime
     music.duration
     const barWidth = (music.currentTime / music.duration) * 100; // calculo para saber o quanto ja se escutou da music
-    currentProgress.style.setProperty('--progress',` ${barWidth}%`)
+    currentProgress.style.setProperty('--progress',` ${barWidth}%`);
 
-
+})
+progressContainer.addEventListener("click", function jumpTo(event) {
+    const width = progressContainer.clientWidth; // informa o tamanho de um elemento
+    const clickPosition = event.offsetX; // informa  onde foi a posição do clique na horizonatal, dando valor dessa posição em pixels
+    const jumpToTime = (clickPosition / width) * music.duration;
+    music.currentTime = jumpToTime;
 })

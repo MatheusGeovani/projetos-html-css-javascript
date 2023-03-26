@@ -52,15 +52,17 @@ img{
 h5, .heart{
     color: #8b999c;
 }
+#progress-container{
+    padding-bottom: 1em;
+}
 .barra{
-    margin: 25px 0px 25px 0px;
+    margin: 25px 0px 0px 0px;
     display: flex;
     justify-content: flex-start;
     background-color: #8b999ca1;
     border-radius: 15px;
     height: 3px;
     width: 100%;
-    
 }
 #current-progress{
     --progress: 0%;
