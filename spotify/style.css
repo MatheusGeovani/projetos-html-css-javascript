@@ -54,6 +54,7 @@ h5, .heart{
 }
 #progress-container{
     padding-bottom: 1em;
+    cursor: pointer;
 }
 .barra{
     margin: 25px 0px 0px 0px;
@@ -93,6 +94,17 @@ i:hover{
     color: #bd5806fa;
     
 }
+.button-active {
+    color: #bd5806fa
+}
+#time-box{
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #8b999cea;
+}
+
 
 @media screen and (min-width:768px) and (max-width:992px){
 
