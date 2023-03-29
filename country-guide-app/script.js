@@ -30,5 +30,7 @@ searchBtn.addEventListener("click", () =>{
             <p class="text-count">Common Languages:  ${Object.values(data[0].languages).toString().split(",").join(", ")}</p>
         </div>
         `
+    }).catch((error) => {
+        alert("Could not find this country")
     })
 })
