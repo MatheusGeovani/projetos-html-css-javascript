@@ -53,7 +53,7 @@ function mostrarItem() {
             <input type="text" class="is-size-5" value="${elemento.valor}"></input>
         </div>
         <div>
-            <button><i class="fa-regular fa-floppy-disk is-clickable"></button></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
+            <button onclick="salvarEdicao()"><i class="fa-regular fa-floppy-disk is-clickable"></button></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
             <i class="fa-solid fa-trash is-clickable deletar"></i>
         </div>
     </li>
@@ -92,7 +92,9 @@ function mostrarItem() {
 }
 function salvarEdicao(){
     const itemEditado = document.querySelector(`[data-value="${itemAEditar}"] input[type="text"]`)
-    console.log(itemEditado.value)
+    listaDeItens[itemAEditar].value = itemEditado.value
+    itemAEditar = -1
+    mostrarItem()
 }
 
 
