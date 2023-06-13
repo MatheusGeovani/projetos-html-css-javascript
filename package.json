@@ -1,0 +1,22 @@
+{
+  "name": "projetos-html-css-javascript",
+  "version": "1.0.0",
+  "description": "Projetos HTML5 CSS3 e Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusGeovani/projetos-html-css-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusGeovani/projetos-html-css-javascript/issues"
+  },
+  "homepage": "https://github.com/MatheusGeovani/projetos-html-css-javascript#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
