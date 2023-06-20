@@ -39,7 +39,7 @@
       "id": 6,
       "titulo": "Híbridos: Flutter e React Native | Desmistificando..",
       "descricao": "1,6 mil visualizações",
-      "url": "https://www.youtube.com/embed/vf9P_PycgRw",
+      "url": "  ",
       "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
     },
     {
@@ -83,6 +83,27 @@
       "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
       "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "id": 12
+    },
+    {
+      "titulo": "Jogando de Yasuo",
+      "descricao": "function toString() { [native code] } mil visualizações",
+      "url": "https://youtu.be/b3Km7h1Eib0https://youtu.be/b3Km7h1Eib0",
+      "imagem": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_57.jpg",
+      "id": 13
+    },
+    {
+      "titulo": "Yasuo do time inimigo",
+      "descricao": "function toString() { [native code] } mil visualizações",
+      "url": "https://www.youtube.com/embed/b3Km7h1Eib0",
+      "imagem": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_57.jpg",
+      "id": 14
+    },
+    {
+      "titulo": "Manual do Homem",
+      "descricao": "9 mil visualizações",
+      "url": "https://www.youtube/embed/YXMiN9aaYIE",
+      "imagem": "https://i.ytimg.com/vi/BhmTvExn3Do/maxresdefault.jpg",
+      "id": 15
     }
   ]
 }
