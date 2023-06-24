@@ -21,14 +21,11 @@ function consultarCEP(evento) {
         .then(data => {
             resultado.innerHTML = `<p><strong>Bairro</strong>: ${data.bairro}</p>
         <p><strong>Cep</strong>: ${data.cep}</p>
-        <p><strong>Complemento</strong>: ${data.complemento}</p>
         <p><strong>DDD</strong>: ${data.ddd}</p>
         <p><strong>Localidade</strong>: ${data.localidade}</p>
         <p><strong>Logradouro</strong>: ${data.logradouro}</p>
         <p><strong>UF</strong>: ${data.uf}</p>`
         })
-
-        
         .catch(error => {
             if(typeof cep === "string"){
                 alert("Digite apenas números para o CEP")
