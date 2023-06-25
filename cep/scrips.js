@@ -4,8 +4,9 @@ const inputCep = document.querySelector("#cep-input")
 const cep = inputCep.value
 
 function handKeyPress(event) {
-    if(event.key && event.key === "Enter"){
+    if (event.key  === "Enter") {
         consultarCEP(event)
+        inputCep.value = ""
     }
 }
 
@@ -19,6 +20,9 @@ function consultarCEP(evento) {
 
         .then(response => response.json())
         .then(data => {
+            if (data.error) {
+                throw Error("CEP não existe")
+            }
             resultado.innerHTML = `<p><strong>Bairro</strong>: ${data.bairro}</p>
         <p><strong>Cep</strong>: ${data.cep}</p>
         <p><strong>DDD</strong>: ${data.ddd}</p>
@@ -27,12 +31,10 @@ function consultarCEP(evento) {
         <p><strong>UF</strong>: ${data.uf}</p>`
         })
         .catch(error => {
-            if(typeof cep === "string"){
-                alert("Digite apenas números para o CEP")
-            }
-            resultado.innerHTML = `<p>Não encontrado CEP informado</p>`
+            resultado.innerHTML = `<p>CEP não existe</p>`
         })
 }
 
 button.addEventListener("click", evento => consultarCEP(evento))
 inputCep.addEventListener("keypress", event => handKeyPress(event))
+
