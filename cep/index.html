@@ -19,3 +19,49 @@
 </body>
 
 </html>
+
+
+
+funcao inicio() {
+    inicio
+    // Passo 1: Leitura do vetor de códigos da capacitacao 1
+    para i de 1 ate 10 faca
+        escreva("Digite o código do funcionário da capacitação 1 na posicao ", i, ": ")
+        leia(vetorCapacitacao1[i])
+    fimpara
+    
+    // Passo 2: Leitura do vetor de códigos da capacitação 2
+    para i de 1 ate 10 faca
+        escreva("Digite o codigo do funcionario da capacitacao 2 na posicao ", i, ": ")
+        leia(vetorCapacitacao2[i])
+    fimpara
+    
+    // Passo 3: Criação do vetor de códigos em comum
+    para i de 1 até 10 faca
+        para j de 1 até 10 faca
+            se vetorCapacitacao1[i] = vetorCapacitacao2[j] entao
+                vetorDuplicidade[i] <- vetorCapacitacao1[i]
+            fimse
+        fimpara
+    fimpara
+    
+    // Passo 4: Verificação de duplicidade e armazenamento no vetor
+    quantidadeDuplicidade <- 0
+    para i de 1 ate 10 faca
+        se vetorDuplicidade[i] ≠ 0 entao
+            quantidadeDuplicidade <- quantidadeDuplicidade + 1
+        fimse
+    fimpara
+    
+    // Passo 5: Mostrar os códigos de duplicidade na tela
+    se quantidadeDuplicidade = 0 entao
+        escreva("Não há códigos duplicados nas duas capacitações.")
+    senao
+        escreva("Códigos duplicados nas duas capacitações:")
+        para i de 1 ate 10 faça
+            se vetorDuplicidade[i] ≠ 0 entao
+                escreva(vetorDuplicidade[i])
+            fimse
+        fimpara
+    fimse
+fim

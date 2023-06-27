@@ -4,9 +4,10 @@ const complemento = document.querySelector("#complemento")
 const bairro = document.querySelector("#bairro")
 const localidade = document.querySelector("#cidade")
 const uf = document.querySelector("#estado")
+const mensagemErro = document.getElementById("mensagemErro")
 
 async function buscaEndereco(cep) {
-
+    mensagemErro.innerHTML = ""
     try {
         const consultaCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
         const consultaCepConvertida = await consultaCep.json()
@@ -26,6 +27,12 @@ async function buscaEndereco(cep) {
 
 
     } catch (erro) {
+        mensagemErro.innerHTML = `<p>CEP inválido</p>`
+        logradouro.value = ""
+        bairro.value = ""
+        complemento.value = ""
+        localidade.value = ""
+        uf.value = ""
         console.log(erro)
     }
 }
